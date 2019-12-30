@@ -86,3 +86,4 @@ if __name__ == '__main__':
     accuracy = correct / len(features_test) * 100
     print("Accuracy: {}%".format(accuracy))
 
+# Accuracy: 98 - 99.27272727272727%
