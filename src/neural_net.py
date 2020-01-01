@@ -48,18 +48,12 @@ def train(features, labels, weights, bias, lr):
     for epoch in range(EPOCHS):
         inputs = features
 
-        # feedforward step1
+        # feedforward
         XW = np.dot(features, weights) + bias
-
-        #feedforward step2
         z = sigmoid(XW)
 
-        # backpropagation step 1
+        # backpropagation
         error = z - labels
-
-        print(error.sum())
-
-        # backpropagation step 2
         partial_der_cost_pred = error
         partial_der_pred_z = sigmoid_derivative(z)
 
